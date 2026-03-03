@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="鈴木太陽のポートフォリオサイト。Web制作・フロントエンドの実績をご覧いただけます。" />
+    <title>Taiyo Suzuki | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ========================================
+       ヘッダー / ナビゲーション
+  ======================================== -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner container">
+            <a href="#hero" class="logo" aria-label="トップへ戻る">
+                <span class="logo-name">Taiyo Suzuki</span>
+            </a>
+            <nav class="nav" aria-label="メインナビゲーション">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#works" class="nav-link">Works</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ========================================
+       ヒーロー（自己紹介）セクション
+       ┌ 差し替えポイント ──────────────────┐
+       │ 名前・肩書き・自己紹介文を変更する場合は
+       │ h1, .hero-title, .hero-bio の中身を編集 │
+       └──────────────────────────────────┘
+  ======================================== -->
+    <section class="hero" id="hero" aria-label="自己紹介">
+
+        <!-- 装飾用blobシェイプ (decoフォルダの画像を変更することで差し替え可能) -->
+        <div class="blob blob--main" aria-hidden="true">
+            <img src="images/blob-blue.png" alt="" />
+        </div>
+        <div class="blob blob--accent" aria-hidden="true">
+            <img src="images/blob-light.png" alt="" />
+        </div>
+
+        <div class="container hero-inner">
+            <div class="hero-text">
+
+                <!-- ▼ 肩書き（変更可） -->
+                <p class="hero-eyebrow">Web制作・フロントエンド</p>
+
+                <!-- ▼ 名前（変更可） -->
+                <h1 class="hero-name">
+                    鈴木&nbsp;<span class="hero-name--accent">太陽</span>
+                </h1>
+
+                <!-- ▼ 自己紹介文（変更可） -->
+                <p class="hero-bio">
+                    Webサイト制作を中心に、見やすさと使いやすさを重視した設計と実装を行っています。<br />
+                    目的や閲覧者を意識し、情報が自然に伝わるサイトづくりを大切にしています。
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#works" class="btn btn--primary" id="works-link">実績を見る</a>
+                    <a href="#contact" class="btn btn--ghost" id="contact-link">お問い合わせ</a>
+                </div>
+
+            </div>
+
+            <!-- ▼ ヒーロー右側の画像エリア（変更可：hero-image-boxの中の<img>のsrcを変更） -->
+            <div class="hero-image">
+                <div class="hero-image-box">
+                    <div class="hero-image-placeholder" aria-label="プロフィール画像エリア">
+                        <!-- ここにプロフィール画像を入れる場合:
+                 <img src="images/profile.jpg" alt="鈴木太陽 プロフィール写真" />
+            -->
+                        <span class="image-placeholder-icon" aria-hidden="true">&#128247;</span>
+                        <span class="image-placeholder-text">プロフィール画像</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- スクロール促進インジケーター -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span class="scroll-dot"></span>
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+       制作実績セクション
+  ======================================== -->
+    <section class="works" id="works" aria-label="制作実績">
+        <div class="container">
+
+            <div class="section-header">
+                <p class="section-eyebrow">Portfolio</p>
+                <h2 class="section-title">制作実績</h2>
+                <p class="section-desc">これまでに制作したWebサイトをご紹介します。</p>
+            </div>
+
+            <!-- ================================================
+           ▼ 実績カードリスト
+           ▼ カードを1つ複製すれば実績を追加できます
+           ================================================ -->
+            <div class="works-grid" id="works-grid">
+
+                <!--
+        ============================================================
+        【実績カード テンプレート】
+        下のコードブロックをコピーして実績カードを追加してください。
+
+        <article class="work-card">
+          <a href="【サイトのURL】" target="_blank" rel="noopener noreferrer" class="work-card__link" aria-label="【サイト名】を見る">
+
+            <div class="work-card__thumb">
+              <img
+                src="images/【スクリーンショットのファイル名.png】"
+                alt="【サイト名】のサムネイル"
+                class="work-card__img"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="work-card__body">
+              <h3 class="work-card__title">【サイト名をここに書く】</h3>
+              <p class="work-card__desc">【1〜2行で概要を書く】</p>
+              <span class="work-card__cta">サイトを見る →</span>
+            </div>
+
+          </a>
+        </article>
+        ============================================================
+        -->
+
+                <!-- ============================================================
+             ここに実績を追加してください
+             上のテンプレートをコピーして、URLや画像・テキストを書き換えます
+             ============================================================ -->
+
+                <!-- 実績追加用プレースホルダー（実績が揃ったら削除してください） -->
+                <div class="works-empty" id="works-empty" aria-label="実績準備中">
+                    <div class="works-empty__icon" aria-hidden="true">&#128444;</div>
+                    <p class="works-empty__text">制作実績を準備中です。<br />しばらくお待ちください。</p>
+                </div>
+
+            </div>
+            <!-- /works-grid -->
+
+        </div>
+    </section>
+
+
+    <!-- ========================================
+       お問い合わせセクション
+  ======================================== -->
+    <section class="contact" id="contact" aria-label="お問い合わせ">
+        <div class="container">
+
+            <div class="section-header">
+                <p class="section-eyebrow">Contact</p>
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-desc">お仕事のご依頼・ご相談はお気軽にどうぞ。</p>
+            </div>
+
+            <div class="contact-wrap">
+
+                <!-- お問い合わせフォーム -->
+                <!-- ▼ 実際に送信したい場合: action属性に送信先を設定（Formspree等）
+             例: <form action="https://formspree.io/f/xxxxxxxx" method="POST" ...>
+        -->
+                <form class="contact-form" id="contact-form" novalidate aria-label="お問い合わせフォーム">
+
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">
+                            お名前 <span class="required" aria-label="必須">*</span>
+                        </label>
+                        <input type="text" id="contact-name" name="name" class="form-input" placeholder="山田 花子" required
+                            autocomplete="name" />
+                        <span class="form-error" id="error-name" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">
+                            メールアドレス <span class="required" aria-label="必須">*</span>
+                        </label>
+                        <input type="email" id="contact-email" name="email" class="form-input"
+                            placeholder="example@email.com" required autocomplete="email" />
+                        <span class="form-error" id="error-email" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">
+                            お問い合わせ内容 <span class="required" aria-label="必須">*</span>
+                        </label>
+                        <textarea id="contact-message" name="message" class="form-textarea"
+                            placeholder="お問い合わせ内容をご記入ください。" required rows="6"></textarea>
+                        <span class="form-error" id="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn--primary btn--wide" id="submit-btn">
+                            送信する
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- 送信完了メッセージ（JavaScriptで表示） -->
+                <div class="contact-success" id="contact-success" hidden aria-live="assertive">
+                    <div class="success-icon" aria-hidden="true">&#10003;</div>
+                    <p class="success-text">
+                        お問い合わせありがとうございます。<br />
+                        内容を確認次第ご連絡いたします。
+                    </p>
+                </div>
+
+            </div>
+            <!-- /contact-wrap -->
+
+        </div>
+    </section>
+
+
+    <!-- ========================================
+       フッター
+  ======================================== -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">&copy; 2026 Taiyo Suzuki. All Rights Reserved.</p>
+            <!-- ▼ SNSリンクを追加する場合はここに <a> タグを追加 -->
+            <nav class="footer-nav" aria-label="フッターナビゲーション">
+                <a href="#about" class="footer-link">About</a>
+                <a href="#works" class="footer-link">Works</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
