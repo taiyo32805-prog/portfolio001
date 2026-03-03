@@ -708,7 +708,7 @@ button {
   right: -10%;
   width: 500px;
   height: 500px;
-  background: url('images/blob-light.png') no-repeat center/contain;
+  background: url('https://github.com/taiyo32805-prog/portfolio001/blob/main/blob-light.png?raw=true') no-repeat center/contain;
   opacity: 0.15;
   pointer-events: none;
   z-index: 0;
