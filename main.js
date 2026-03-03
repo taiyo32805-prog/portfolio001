@@ -71,9 +71,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 /* -----------------------------------------------
    お問い合わせフォーム バリデーション & 送信処理
    ----------------------------------------------- */
-const form         = document.getElementById('contact-form');
+const form = document.getElementById('contact-form');
 const successPanel = document.getElementById('contact-success');
-const submitBtn    = document.getElementById('submit-btn');
+const submitBtn = document.getElementById('submit-btn');
 
 /* --- バリデーションルール --- */
 const rules = {
@@ -97,8 +97,8 @@ const rules = {
  * @returns {boolean}
  */
 function validateField(field) {
-  const name  = field.name;
-  const rule  = rules[name];
+  const name = field.name;
+  const rule = rules[name];
   const error = document.getElementById(`error-${name}`);
   if (!rule || !error) return true;
 
@@ -149,13 +149,8 @@ form.addEventListener('submit', function (e) {
           });
      =================================================== */
 
-  /* ダミー処理: ローディング状態 → 完了表示 */
+  /* SSGform への送信を実行 */
   submitBtn.disabled = true;
   submitBtn.textContent = '送信中…';
-
-  setTimeout(() => {
-    form.style.display = 'none';
-    successPanel.hidden = false;
-    successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 800); // ダミーの待機時間 (本番では削除)
+  form.submit();
 });
