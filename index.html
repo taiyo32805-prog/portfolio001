@@ -153,11 +153,30 @@
              上のテンプレートをコピーして、URLや画像・テキストを書き換えます
              ============================================================ -->
 
-                <!-- 実績追加用プレースホルダー（実績が揃ったら削除してください） -->
-                <div class="works-empty" id="works-empty" aria-label="実績準備中">
-                    <div class="works-empty__icon" aria-hidden="true">&#128444;</div>
-                    <p class="works-empty__text">制作実績を準備中です。<br />しばらくお待ちください。</p>
-                </div>
+                <!-- ▼ 実績カード 1 ：ポモドーロタイマー -->
+                <article class="work-card">
+                    <a href="https://taiyo32805-prog.github.io/pomodoro001/" target="_blank" rel="noopener noreferrer"
+                        class="work-card__link" aria-label="ポモドーロタイマーを見る">
+
+                        <div class="work-card__thumb">
+                            <img src="images/pomodoro.png" alt="ポモドーロタイマーのサムネイル" class="work-card__img"
+                                loading="lazy" />
+                        </div>
+
+                        <div class="work-card__body">
+                            <h3 class="work-card__title">ポモドーロタイマー</h3>
+                            <p class="work-card__desc">
+                                集中と休憩を繰り返すポモドーロ・テクニックをベースにしたタイマーアプリ。シンプルな操作性と視認しやすいデザインで、日々の作業効率アップをサポートします。</p>
+                            <span class="work-card__cta">サイトを見る →</span>
+                        </div>
+
+                    </a>
+                </article>
+                <!-- ▲ 実績カード 1 ここまで -->
+
+                <!-- ============================================================
+                     ▼ 次の実績カードはここに追加してください（上のカードをコピー）
+                     ============================================================ -->
 
             </div>
             <!-- /works-grid -->
@@ -184,7 +203,8 @@
                 <!-- ▼ 実際に送信したい場合: action属性に送信先を設定（Formspree等）
              例: <form action="https://formspree.io/f/xxxxxxxx" method="POST" ...>
         -->
-                <form class="contact-form" id="contact-form" novalidate aria-label="お問い合わせフォーム">
+                <form action="https://ssgform.com/s/S9AOc4OyGPRn" method="POST" class="contact-form" id="contact-form"
+                    novalidate aria-label="お問い合わせフォーム">
 
                     <div class="form-group">
                         <label for="contact-name" class="form-label">
